@@ -19,13 +19,12 @@ class Contact extends Component {
         <img src={this.props.avatar} className="avatar" alt={this.props.name} />
         <div>
           <h4 className="name">{this.props.name}</h4>
-          <div className="status">
+          <div className="status" onClick={eventForOnClick}>
             <div
               className={this.state.status ? "status-online" : "status-offline"}
-              onClick={eventForOnClick}
             ></div>
             <p className="status-text">
-              {this.props.online ? "online" : "offline"}
+              {this.state.status ? "online" : "offline"}
             </p>
           </div>
         </div>
